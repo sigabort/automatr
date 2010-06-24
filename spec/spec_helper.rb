@@ -25,3 +25,13 @@ Rspec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 end
+
+#
+# Random string generator
+#
+def rand_str(length = 20)
+  s = (('a'..'z').to_a + ('A'..'Z').to_a + (0..9).to_a).join
+  str = ''
+  length.times { str << s[rand(s.size)] }
+  str
+end
