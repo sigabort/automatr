@@ -11,7 +11,7 @@ describe Institute do
       inst = Institute.new(@attrs)
       inst.save
       inst.should be_valid
-      inst.status.should == "Active"
+      inst.status.should eql("Active")
     end
     
   end #default value for

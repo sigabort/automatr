@@ -9,15 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100624202243) do
+ActiveRecord::Schema.define(:version => 20100624205636) do
 
   create_table "institutes", :force => true do |t|
-    t.string   "name"
+    t.string   "name",                               :null => false
     t.string   "display_name"
     t.string   "code"
     t.string   "email"
     t.string   "description"
-    t.string   "status"
+    t.string   "status",       :default => "Active", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
