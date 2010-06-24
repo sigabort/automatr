@@ -14,6 +14,8 @@ describe Institute do
       inst.status.should eql("Active")
     end
     
+    pending "code should be set depends on the request"
+    
   end #default value for
   
   

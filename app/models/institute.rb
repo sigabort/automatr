@@ -9,5 +9,8 @@ class Institute < ActiveRecord::Base
 
   #Status is set to "Active" if not specified (by default)
   validates :status,   :status => true
+
+  #Set accessible attributes. Code cannot be set in mass assignment.
+  attr_accessible :name, :display_name, :description, :email, :status
   
 end
