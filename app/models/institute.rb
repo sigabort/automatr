@@ -13,4 +13,6 @@ class Institute < ActiveRecord::Base
   #Set accessible attributes. Code cannot be set in mass assignment.
   attr_accessible :name, :display_name, :description, :email, :status
   
+  
+  
 end

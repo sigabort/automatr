@@ -26,5 +26,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 group :test do
   gem "rspec"
   gem "rspec-rails",      ">= 2.0.0.beta"
-  gem 'webrat'
+  gem 'capybara'
+  gem 'launchy'
 end

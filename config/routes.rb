@@ -1,4 +1,9 @@
 Automatr::Application.routes.draw do |map|
+  get "institutes/show"
+  get "institutes/update"
+
+  resources :institutes
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
