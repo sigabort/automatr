@@ -1,6 +1,4 @@
 Automatr::Application.routes.draw do |map|
-  resources :users
-
   get "institutes/show"
   get "institutes/update"
 
