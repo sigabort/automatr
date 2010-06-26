@@ -16,7 +16,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/atmtr_prod.sqlite3
+  adapter: postgresql
+  database: db/atmtr_prod
   pool: 5
   timeout: 5000
