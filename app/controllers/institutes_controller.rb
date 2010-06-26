@@ -17,17 +17,27 @@ class InstitutesController < ApplicationController
     end
   end
 
+  #Send the institute information, if found
   def show
-    @institute = Institute.find(params[:id])
-    respond_with(@institute) unless @institue.nil?
-  rescue ActiveRecord::RecordNotFound
-    flash.now[:error] = "Invalid Institute ID"
+    # No lazy loading here. As, we are going to decide whether to send
+    # the object or not
+    @institute = Institute.with_name(params[:id]).first
+    flash.now[:error] = "Invalid Institute name" if @institute.nil?
+    respond_with(@institute)
   end
 
   def index
+    @title = "Institutes"
+    @institutes = Institute.browse
+    respond_with(@institutes)
   end
 
   def update
+    
   end
 
+  def destroy
+    
+  end
+  
 end

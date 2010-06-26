@@ -1,0 +1,21 @@
+<% if institute.nil? %>
+  <h3> Institute is not found </h3>
+
+<% else %>
+  
+  <%= form_for(institute) do |f| %>
+    <div class="field">
+      <%= f.label :name %>: <%= institute.name %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>: <%= institute.description %>
+    </div>
+    <div class="field">
+      <%= f.label :display_name %>: <%= institute.display_name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %>: <%= institute.email %>
+    </div>
+  <% end %> <%# end of form-for %>
+  
+<% end %>

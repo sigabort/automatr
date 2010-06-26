@@ -1,18 +1,1 @@
-<% if @institute.nil? %>
-  <h3> Institute is not found </h3>
-<% else %>
-  <%= form_for(@institute) do |f| %>
-    <div class="field">
-      <%= f.label :name %>: <%= f.label @institute.name %>
-    </div>
-    <div class="field">
-      <%= f.label :description %>: <%= f.label @institute.description %>
-    </div>
-    <div class="field">
-      <%= f.label :display_name %>: <%= f.label @institute.display_name %>
-    </div>
-    <div class="field">
-      <%= f.label :email %>: <%= f.label @institute.email %>
-    </div>
-  <% end %>
-<% end %>
+<%= render :partial => 'show_institute', :locals => {:institute => @institute} %>
