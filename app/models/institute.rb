@@ -17,7 +17,7 @@ class Institute < ActiveRecord::Base
   scope :with_name, lambda { |name| where(:name => name)}
   
   #Scope to get the institutes with given offset and limit
-  scope :browse, lambda { |offset = 0, limit = 20| limit(limit).offset(offset) }
+  scope :browse, lambda { |offset, limit| limit(limit).offset(offset) }
   
   # This method is called when we use redirect_to(object)
   # to use the model attribute to use in the URLs.  By default,

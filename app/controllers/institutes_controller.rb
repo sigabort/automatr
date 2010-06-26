@@ -28,7 +28,7 @@ class InstitutesController < ApplicationController
 
   def index
     @title = "Institutes"
-    @institutes = Institute.browse
+    @institutes = Institute.browse(0, 20)
     respond_with(@institutes)
   end
 
