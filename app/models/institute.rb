@@ -1,7 +1,7 @@
 class Institute < ActiveRecord::Base
   validates :name,     :uniqueness => true,
-                       :length => {:minimum => 1, :maximum => 255}
-                       :presence => true,
+                       :length => {:minimum => 1, :maximum => 255},
+                       :presence => true
 
   validates :display_name, :length => {:maximum => 1024}
 
